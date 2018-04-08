@@ -3,10 +3,9 @@
     src: url(../fonts/GenBkBasB.ttf);
 }
 
-
- @font-face {
-	font-family: "Yeseva One"; 
-	src: url(../fonts/YesevaOne.ttf); 
+@font-face {
+    font-family: "Yeseva One";
+    src: url(../fonts/YesevaOne.ttf);
 }
 
 @font-face {
@@ -28,6 +27,7 @@
     font-family: "OpenSans-Italic";
     src: url(../OpenSans-Italic.ttf);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -38,13 +38,13 @@ body {
     width: 1600px;
     margin: 0 auto;
     display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: stretch;
-  min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: stretch;
+    min-height: 100%;
 }
 
-main{
+main {
     flex: 1 1 auto;
 }
 
@@ -58,70 +58,87 @@ main{
     padding-top: 10px;
 }
 
-h1{
-    
-display: none;
+h1 {
+    display: none;
 }
 
 /* ---------HEADER-------- */
 
-
 nav ul {
-    list-style-type: none; 
+    list-style-type: none;
     overflow: hidden;
-
+    display: flex;
+    flex-direction: row;
 }
 
 nav ul li {
-    display: inline-block;
     padding-left: 50px;
     margin: 0 auto;
 }
 
-nav ul li a:hover{
+/* nav ul li a:hover{
     border-top:2px solid #dde0df;  
-}
+    top: -2px;
+} */
 
 /* header {
     margin: 0 auto;
 } */
-.nav ul li a {
+nav ul li a::before {
     display: block;
+    height: 3px;
+    width: 0%;
+    background: #c3caca;
+    transition: .8s;
+    content: "";
+    margin-top: -27px;
+
+margin-bottom: 27px;
+}
+
+.nav a:hover:before,
+.nav a:focus:before {
+    width: 100%;
+}
+
+.nav ul li a {
+    display: inline-block;
     font-size: 21px;
     font-family: "Gentium Book Basic";
     font-weight: bold;
     line-height: 1.2;
     color: white;
     text-align: center;
-    text-decoration: none;  
+    text-decoration: none;
     padding-top: 27px;
-       
+    line-height: 1;
 }
 
-.nav-menu{
+.nav-menu {
     display: flex;
     flex-direction: row;
     max-width: 900px;
     float: right;
     margin-right: 13.4%;
-    
-}
-.icons-header{
-    margin: 0 10px;
-    padding-top: 27px;
 }
 
-.icons-header i{
-    color:#c89f2d;
+.icons-header {
+    margin: 0 10px;
+    padding-top: 27px;
+    display: flex;
+    flex-direction: row;
+}
+
+.icons-header i {
+    color: #c89f2d;
     margin: 5px;
 }
 
-.icons-header li{
+.icons-header li {
     list-style-type: none;
     margin-left: 0px;
     padding-left: 0px;
     display: inline-block;
-    
 }
 
 .navbar {
@@ -320,12 +337,13 @@ h2 {
     height: 1000px;
     background-image: url(../img/pat4.jpg);
 }
-.box-menu{
+
+.box-menu {
     display: grid;
     grid-template-columns: auto auto;
     /* grid-gap: 50px; */
     overflow: auto;
-    max-height: 920px; 
+    max-height: 920px;
 }
 
 .left-col {
@@ -340,7 +358,7 @@ h2 {
 .right-col {
     display: block;
     margin-top: 6.25%;
-/*     
+    /*     
     margin-top: 6.25%;
     margin-right: 17.8%; */
     max-height: 870px;
@@ -524,10 +542,9 @@ p~span {
     height: 710px;
 }
 
-.box-reservations{
+.box-reservations {
     display: grid;
     grid-template-columns: auto auto;
-
 }
 
 .left-reservations {
@@ -630,10 +647,9 @@ form div>input {
     outline: none;
 }
 
-.data-calen input[type="text"]
-{
-background: url(../img/Calendar.png) no-repeat 95%;
-background-color: white;
+.data-calen input[type="text"] {
+    background: url(../img/Calendar.png) no-repeat 95%;
+    background-color: white;
 }
 
 .right-reservations-btn {
@@ -686,7 +702,7 @@ footer p {
     display: block;
     text-align: center;
     margin: 0 auto;
-    margin-left:0;
+    margin-left: 0;
 }
 
 .schedule {
@@ -710,7 +726,7 @@ footer p {
     margin-right: 0;
 }
 
-.about-us p{
+.about-us p {
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -721,65 +737,65 @@ footer p {
     overflow: auto;
 }
 
-.schedule ul{
-list-style-type: none;
-}
-
-.schedule ul i{
-    color: rgb(174, 173, 173);
-    margin: 5px;
-}
-
-.cards li{
-    margin-left: 0px;
-    padding-left: 0px;
-    display: inline-block;
-}
-
-.location ul{
+.schedule ul {
     list-style-type: none;
-    
 }
 
-.location ul i{
+.schedule ul i {
     color: rgb(174, 173, 173);
     margin: 5px;
 }
 
-.footer-soc-seti li{
+.cards li {
     margin-left: 0px;
     padding-left: 0px;
     display: inline-block;
 }
- 
-.box-footer img{
+
+.location ul {
+    list-style-type: none;
+}
+
+.location ul i {
+    color: rgb(174, 173, 173);
+    margin: 5px;
+}
+
+.footer-soc-seti li {
+    margin-left: 0px;
+    padding-left: 0px;
+    display: inline-block;
+}
+
+.box-footer img {
     width: 200px;
     height: 20px;
     padding-bottom: 20px;
-padding-top: 20px;
+    padding-top: 20px;
 }
 
-.icons{
+.icons {
     padding-top: 50px;
 }
 
 /* -----hover---- */
-.buttom-black:hover{
+
+.buttom-black:hover {
     background-color: rgba(148, 146, 146, 0.5);
 }
 
-.buttom-white:hover{
+.buttom-white:hover {
     background-color: rgba(73, 72, 72, 0.3);
 }
 
-.icons-header i:hover{
-    color:#ffc831;
+.icons-header i:hover {
+    color: #ffc831;
 }
 
-.right-reservations-btn:hover{
+.right-reservations-btn:hover {
     background-color: #e4b533;
 }
 
-.icons i:hover{
+.icons i:hover {
     color: rgb(255, 255, 255);
 }
